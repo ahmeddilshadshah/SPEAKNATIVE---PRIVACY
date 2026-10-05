@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Speak Native FAQ</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #FFFBF8; --surface: #FFFFFF; --surface-alt: #FFF4EE; --surface-cool: #EFFBF8;
+    --border: #F0E4DC; --text: #241C1A; --text-secondary: #5F534D; --text-muted: #7A6E68;
+    --teal: #1B565D; --orange: #B33A0E; color-scheme: light;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #1A1512; --surface: #241E1A; --surface-alt: #2C231D; --surface-cool: #1C2624;
+      --border: #3A2F28; --text: #F5EFEA; --text-secondary: #C9BDB4; --text-muted: #9C8F86;
+      --teal: #6FCBD1; --orange: #FF9B6A; color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #1A1512; --surface: #241E1A; --surface-alt: #2C231D; --surface-cool: #1C2624;
+    --border: #3A2F28; --text: #F5EFEA; --text-secondary: #C9BDB4; --text-muted: #9C8F86;
+    --teal: #6FCBD1; --orange: #FF9B6A; color-scheme: dark;
+  }
+  * { box-sizing: border-box; }
+  body { background: var(--bg); color: var(--text); font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif; font-size: 16px; line-height: 1.6; padding: 0 20px 64px; }
+  .wrap { max-width: 660px; margin: 0 auto; }
+  header { padding: 40px 0 28px; text-align: center; }
+  .wordmark { font-family: "Poppins", sans-serif; font-weight: 700; font-size: 22px; letter-spacing: -0.01em; }
+  .wordmark .native { color: var(--teal); } .wordmark .speak { color: var(--orange); }
+  .tagline { font-family: "Poppins", sans-serif; font-weight: 500; font-size: 12px; color: var(--text-muted); font-style: italic; margin-top: 2px; }
+  h1 { font-family: "Poppins", sans-serif; font-weight: 700; font-size: 27px; text-align: center; margin: 20px 0 8px; }
+  .sub { text-align: center; color: var(--text-secondary); font-size: 15px; max-width: 440px; margin: 0 auto 28px; }
+
+  .group-label {
+    font-family: "Poppins", sans-serif; font-weight: 600; font-size: 12px;
+    text-transform: uppercase; letter-spacing: 0.06em; color: var(--teal);
+    margin: 32px 0 10px;
+  }
+  .group-label:first-of-type { margin-top: 8px; }
+
+  details {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 4px 18px;
+    margin-bottom: 10px;
+  }
+  summary {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+    padding: 16px 0;
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+  }
+  summary::-webkit-details-marker { display: none; }
+  summary .chev { color: var(--text-muted); font-size: 13px; transition: transform 0.15s ease; flex-shrink: 0; }
+  details[open] summary .chev { transform: rotate(180deg); }
+  details p { color: var(--text-secondary); font-size: 14.5px; margin: -4px 0 16px; padding-right: 20px; }
+  details a { color: var(--teal); }
+
+  footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--border); color: var(--text-muted); font-size: 13px; text-align: center; }
+  footer a { color: var(--teal); }
+  html,body{margin:0}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <header>
+    <div class="wordmark"><span class="speak">Speak</span> <span class="native">Native</span></div>
+    <div class="tagline">Learn what matters</div>
+  </header>
+
+  <h1>Help &amp; FAQ</h1>
+  <p class="sub">Tap a question to expand it. If you can't find what you're after, our contact details are at the bottom.</p>
+
+  <div class="group-label">The basics</div>
+
+  <details>
+    <summary>Is Speak Native free?<span class="chev">▾</span></summary>
+    <p>Yes. There's no account, no subscription, and nothing to buy — every feature is available from the moment you install it.</p>
+  </details>
+
+  <details>
+    <summary>Do I need an internet connection?<span class="chev">▾</span></summary>
+    <p>No. Speak Native works fully offline — all of its content is installed with the app, so you can learn on a plane, in the subway, or anywhere else without a signal.</p>
+  </details>
+
+  <details>
+    <summary>Is my progress backed up anywhere?<span class="chev">▾</span></summary>
+    <p>No — everything (your progress, recordings, name, and photo) is stored only on your device. Uninstalling the app deletes it permanently. If your device itself backs up app data (like iCloud or Android's automatic backup), that's controlled by your device, not by us.</p>
+  </details>
+
+  <details>
+    <summary>Does the app collect any personal data?<span class="chev">▾</span></summary>
+    <p>No analytics, no advertising, no tracking, and no server at all — everything you enter stays on your device. See the full <a href="index.html">Privacy Policy</a> for details.</p>
+  </details>
+
+  <div class="group-label">Learning</div>
+
+  <details>
+    <summary>How accurate are the translations and pronunciation guides?<span class="chev">▾</span></summary>
+    <p>They're machine-generated, and not all of them have been checked by a native speaker yet — Settings has a short note about this. They're a solid starting point for everyday situations, but for anything high-stakes (medical, legal, official), use a professional translator instead.</p>
+  </details>
+
+  <details>
+    <summary>Why does the pronunciation guide look different depending on my base language?<span class="chev">▾</span></summary>
+    <p>It's not universal phonetic notation — it's written specifically for how a reader of <em>your</em> base language would naturally sound it out. Switch your base language in Settings and you'll see the same word respelled differently, in a way that matches how you already read.</p>
+  </details>
+
+  <details>
+    <summary>Can I learn more than one language at a time?<span class="chev">▾</span></summary>
+    <p>Yes. During onboarding, pick as many as you like, in the order you want to focus on them. Each language keeps its own separate progress, favorites, and practice history — switching your active language on Home never affects the others.</p>
+  </details>
+
+  <details>
+    <summary>Is English available to learn, or only as a base language?<span class="chev">▾</span></summary>
+    <p>Both — English is a full learnable target language too, with the same pronunciation guides, practice mode, and content as every other language.</p>
+  </details>
+
+  <details>
+    <summary>What's the difference between "Level" and "Bonus" content?<span class="chev">▾</span></summary>
+    <p>Levels 1–5 make up the Core Course, which is what the progress bar on Home tracks. Level 6 is an open-ended "Bonus" tier that continues after — nothing is ever locked, so you can explore Bonus content whenever you like.</p>
+  </details>
+
+  <div class="group-label">Using the app</div>
+
+  <details>
+    <summary>How do I switch which language I'm learning?<span class="chev">▾</span></summary>
+    <p>Tap the language pill at the top of the Home screen. It lists the languages you chose during onboarding first, in your preference order, followed by any others.</p>
+  </details>
+
+  <details>
+    <summary>How do I record and compare my pronunciation?<span class="chev">▾</span></summary>
+    <p>Tap the mic icon on any word or phrase card to start recording, and tap it again to stop. In the Practice tab, your recording from when you first learned a word and your latest practice attempt both stay available, so you can play them side by side.</p>
+  </details>
+
+  <details>
+    <summary>I marked something as learned by mistake — how do I undo it?<span class="chev">▾</span></summary>
+    <p>Tap the checkmark icon again on that same word or phrase to un-mark it — it'll return to your Continue Learning queue on Home.</p>
+  </details>
+
+  <details>
+    <summary>What does "Still shaky" do in Practice?<span class="chev">▾</span></summary>
+    <p>It un-marks that item as learned and sends it back into Home's main learning queue, so you'll see it again from the start rather than in the practice rotation.</p>
+  </details>
+
+  <details>
+    <summary>I don't hear any sound when I tap a card — what should I check?<span class="chev">▾</span></summary>
+    <p>First, check your device isn't muted or on silent, and the volume is up. Playback uses your device's own text-to-speech engine, so on some devices (particularly Android) you may need to install a voice pack for that language in your system's Text-to-Speech settings.</p>
+  </details>
+
+  <details>
+    <summary>How do I delete my recordings, photo, or all my progress?<span class="chev">▾</span></summary>
+    <p>You can remove your photo any time from Settings. There's currently no single "reset everything" button — since all data lives only on your device, uninstalling the app deletes your recordings, progress, and settings for good.</p>
+  </details>
+
+  <div class="group-label">Still stuck?</div>
+
+  <details>
+    <summary>How do I contact support?<span class="chev">▾</span></summary>
+    <p>Email <strong>speaknative.learn@gmail.com</strong> and we'll get back to you.</p>
+  </details>
+
+  <footer>Speak Native · Learn what matters — see also our <a href="manual.html">User Manual</a>, <a href="terms.html">Terms of Use</a>, and <a href="index.html">Privacy Policy</a>.</footer>
+</div>
+
+</body>
+</html>

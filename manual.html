@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Speak Native Manual</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #FFFBF8; --surface: #FFFFFF; --surface-alt: #FFF4EE; --surface-cool: #EFFBF8;
+    --border: #F0E4DC; --text: #241C1A; --text-secondary: #5F534D; --text-muted: #7A6E68;
+    --teal: #1B565D; --teal-pale: #DFF5EF; --orange: #B33A0E; --orange-pale: #FFE4D6;
+    color-scheme: light;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #1A1512; --surface: #241E1A; --surface-alt: #2C231D; --surface-cool: #1C2624;
+      --border: #3A2F28; --text: #F5EFEA; --text-secondary: #C9BDB4; --text-muted: #9C8F86;
+      --teal: #6FCBD1; --teal-pale: #1C2624; --orange: #FF9B6A; --orange-pale: #3A2418;
+      color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #1A1512; --surface: #241E1A; --surface-alt: #2C231D; --surface-cool: #1C2624;
+    --border: #3A2F28; --text: #F5EFEA; --text-secondary: #C9BDB4; --text-muted: #9C8F86;
+    --teal: #6FCBD1; --teal-pale: #1C2624; --orange: #FF9B6A; --orange-pale: #3A2418;
+    color-scheme: dark;
+  }
+  * { box-sizing: border-box; }
+  body { background: var(--bg); color: var(--text); font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif; padding: 0 20px 64px; }
+  .wrap { max-width: 720px; margin: 0 auto; }
+  header { padding: 40px 0 32px; text-align: center; }
+  .wordmark { font-family: "Poppins", sans-serif; font-weight: 700; font-size: 24px; letter-spacing: -0.01em; }
+  .wordmark .native { color: var(--teal); } .wordmark .speak { color: var(--orange); }
+  .tagline { font-family: "Poppins", sans-serif; font-weight: 500; font-size: 13px; color: var(--text-muted); font-style: italic; margin-top: 2px; }
+  h1 { font-family: "Poppins", sans-serif; font-weight: 700; font-size: 28px; text-align: center; margin: 20px 0 8px; text-wrap: balance; }
+  .sub { text-align: center; color: var(--text-secondary); font-size: 15px; max-width: 480px; margin: 0 auto 8px; }
+
+  .section {
+    display: grid;
+    grid-template-columns: 64px 1fr;
+    gap: 20px;
+    padding: 36px 0;
+    border-top: 1px solid var(--border);
+  }
+  .num {
+    font-family: "Poppins", sans-serif;
+    font-weight: 800;
+    font-size: 15px;
+    color: var(--orange);
+    background: var(--orange-pale);
+    width: 40px; height: 40px;
+    border-radius: 12px;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .eyebrow { font-family: "Poppins", sans-serif; font-weight: 600; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--teal); margin-bottom: 6px; }
+  h2 { font-family: "Poppins", sans-serif; font-weight: 700; font-size: 21px; margin: 0 0 8px; text-wrap: balance; }
+  .section p.lead { font-size: 15.5px; color: var(--text-secondary); margin: 0 0 14px; max-width: 52ch; }
+  .points { display: flex; flex-direction: column; gap: 10px; }
+  .point {
+    display: flex; align-items: flex-start; gap: 10px;
+    font-size: 14.5px; color: var(--text-secondary);
+    background: var(--surface); border: 1px solid var(--border); border-radius: 12px;
+    padding: 12px 14px;
+  }
+  .point b { color: var(--text); font-weight: 600; }
+  .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--teal); margin-top: 7px; flex-shrink: 0; }
+
+  .callout {
+    background: var(--surface-cool);
+    border-radius: 14px;
+    padding: 16px 18px;
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-top: 8px;
+  }
+  .callout b { color: var(--teal); }
+
+  .toc { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; margin: 24px 0 8px; }
+  .toc a { font-size: 12.5px; text-decoration: none; color: var(--text-secondary); background: var(--surface-alt); border: 1px solid var(--border); border-radius: 999px; padding: 6px 12px; }
+  .toc a:hover { color: var(--teal); border-color: var(--teal); }
+
+  footer { margin-top: 24px; padding-top: 24px; border-top: 1px solid var(--border); color: var(--text-muted); font-size: 13px; text-align: center; }
+  html,body{margin:0}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <header>
+    <div class="wordmark"><span class="speak">Speak</span> <span class="native">Native</span></div>
+    <div class="tagline">Learn what matters</div>
+  </header>
+
+  <h1>How Speak Native works</h1>
+  <p class="sub">A quick tour of every screen, in the order you'll actually use them — from your first launch to your hundredth practice session.</p>
+
+  <nav class="toc">
+    <a href="#s1">Getting started</a>
+    <a href="#s2">Home</a>
+    <a href="#s3">Learning a word</a>
+    <a href="#s4">Vocabulary</a>
+    <a href="#s5">Phrases</a>
+    <a href="#s6">Search</a>
+    <a href="#s7">Practice</a>
+    <a href="#s8">Recording</a>
+    <a href="#s9">Settings</a>
+    <a href="#s10">Levels &amp; Bonus</a>
+  </nav>
+
+  <section class="section" id="s1">
+    <div class="num">01</div>
+    <div>
+      <div class="eyebrow">Getting started</div>
+      <h2>Set up in under a minute</h2>
+      <p class="lead">No account, no sign-up. Three quick steps and you're on Home.</p>
+      <div class="points">
+        <div class="point"><span class="dot"></span><span><b>Choose your base language</b> — the language you'll read meanings and menus in. Speak Native guesses it from your device automatically.</span></div>
+        <div class="point"><span class="dot"></span><span><b>Pick the language(s) you want to learn</b>, in order of priority — tap them in the order you want, and each gets a number so you can see your ranking.</span></div>
+        <div class="point"><span class="dot"></span><span><b>A 30-second orientation</b> covers Levels, tapping to hear words, and the Practice tab — then you land on Home.</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="s2">
+    <div class="num">02</div>
+    <div>
+      <div class="eyebrow">Home</div>
+      <h2>Your Continue Learning carousel</h2>
+      <p class="lead">Home always picks up exactly where you left off — for whichever language is currently active.</p>
+      <div class="points">
+        <div class="point"><span class="dot"></span><span><b>Switch languages</b> any time from the picker at the top — each language keeps its own separate progress.</span></div>
+        <div class="point"><span class="dot"></span><span><b>Core Course Progress</b> tracks Levels 1–5; tap any Level dot to jump straight to it in the carousel.</span></div>
+        <div class="point"><span class="dot"></span><span><b>Swipe through cards</b> one word or phrase at a time, always starting from the next thing you haven't learned yet.</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="s3">
+    <div class="num">03</div>
+    <div>
+      <div class="eyebrow">Learning a word</div>
+      <h2>Tap to hear, mark to remember</h2>
+      <p class="lead">Every card shows the native text, a pronunciation guide written for how <em>you</em> read, and the meaning — all at once.</p>
+      <div class="points">
+        <div class="point"><span class="dot"></span><span><b>Tap the card</b> to hear it spoken aloud, with the pronunciation guide highlighting syllable by syllable as it plays.</span></div>
+        <div class="point"><span class="dot"></span><span><b>Star</b> to save it to Favorites, or tap the <b>checkmark</b> once you've got it — that's what moves the carousel forward.</span></div>
+        <div class="point"><span class="dot"></span><span><b>Mic icon</b> lets you record your own attempt right there, without leaving the card.</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="s4">
+    <div class="num">04</div>
+    <div>
+      <div class="eyebrow">Vocabulary</div>
+      <h2>Browse by topic, not just by order</h2>
+      <p class="lead">Every word you're learning, grouped by category, with its own progress bar.</p>
+      <div class="points">
+        <div class="point"><span class="dot"></span><span><b>Filter by Level or category</b>, or search across native text, pronunciation, and meaning at once.</span></div>
+        <div class="point"><span class="dot"></span><span><b>Hide learned</b> to see only what's left in a category.</span></div>
+        <div class="point"><span class="dot"></span><span>Tap the <b>lightning icon</b> on any category header to jump straight into practicing just that category.</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="s5">
+    <div class="num">05</div>
+    <div>
+      <div class="eyebrow">Phrases</div>
+      <h2>Real situations, real sentences</h2>
+      <p class="lead">Phrases are grouped by situation — Restaurant, Airport, Emergency, Meeting People, and more.</p>
+      <div class="points">
+        <div class="point"><span class="dot"></span><span>Each phrase shows the individual <b>words it's built from</b>, and whether you've learned each one yet — a gentle nudge, never a lock.</span></div>
+        <div class="point"><span class="dot"></span><span>Longer phrases include a <b>word-by-word breakdown</b> underneath, so you can see how the native word order actually works.</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="s6">
+    <div class="num">06</div>
+    <div>
+      <div class="eyebrow">Search</div>
+      <h2>Find anything, from anywhere</h2>
+      <p class="lead">One search box across your entire Vocabulary and Phrases library.</p>
+      <div class="points">
+        <div class="point"><span class="dot"></span><span>Matches the <b>native script</b>, the <b>pronunciation guide</b>, or the <b>meaning</b> — whichever you remember.</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="s7">
+    <div class="num">07</div>
+    <div>
+      <div class="eyebrow">Practice</div>
+      <h2>Recall it before you reveal it</h2>
+      <p class="lead">The Practice tab is a folder per language — every language you've learned anything in shows up there.</p>
+      <div class="points">
+        <div class="point"><span class="dot"></span><span>You see the <b>meaning first</b>. Try to recall the word, then tap <b>Reveal</b> to check yourself.</span></div>
+        <div class="point"><span class="dot"></span><span>Rate it <b>Got it</b> to build a streak, or <b>Still shaky</b> to send it back to Home's main queue for more exposure.</span></div>
+        <div class="point"><span class="dot"></span><span>Jump into practicing just <b>one category or situation</b> directly from Vocabulary or Phrases instead of the whole language.</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="s8">
+    <div class="num">08</div>
+    <div>
+      <div class="eyebrow">Recording</div>
+      <h2>Hear yourself, next to the reference</h2>
+      <p class="lead">Tap the mic to record your own pronunciation attempt, on the learning card or in Practice.</p>
+      <div class="points">
+        <div class="point"><span class="dot"></span><span>Tap once to <b>start</b>, tap again to <b>stop</b> — built for full sentences, not just quick words.</span></div>
+        <div class="point"><span class="dot"></span><span>In Practice, your <b>learning attempt and practice attempt</b> both stay available side by side, so you can compare how you sound now versus when you first learned it.</span></div>
+        <div class="point"><span class="dot"></span><span>Recordings never leave your device — see the <a href="index.html" style="color:var(--teal)">Privacy Policy</a> for details.</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="s9">
+    <div class="num">09</div>
+    <div>
+      <div class="eyebrow">Settings</div>
+      <h2>Make it yours</h2>
+      <p class="lead">A name and photo for your Home-screen greeting, and the one setting that shapes everything else.</p>
+      <div class="points">
+        <div class="point"><span class="dot"></span><span>Your <b>base language</b> controls the app's own menus <em>and</em> which language every pronunciation guide is written for — switch it any time.</span></div>
+        <div class="point"><span class="dot"></span><span>A short note in Settings explains that pronunciation guides and translations are <b>machine-generated</b> and not yet all native-reviewed.</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="s10">
+    <div class="num">10</div>
+    <div>
+      <div class="eyebrow">Levels &amp; Bonus</div>
+      <h2>Nothing is ever locked</h2>
+      <p class="lead">Content is organized into five Core Levels, plus an open-ended Bonus tier — jump around freely at any point.</p>
+      <div class="points">
+        <div class="point"><span class="dot"></span><span><b>Levels 1–5</b> are the Core Course — what the progress bar on Home tracks.</span></div>
+        <div class="point"><span class="dot"></span><span><b>Level 6, Bonus</b>, keeps going after — extra vocabulary and phrases for when you want more, marked with a small badge wherever it appears.</span></div>
+      </div>
+      <div class="callout"><b>Tip:</b> finishing every Core item shows a banner on Home before the carousel moves into Bonus content — that's your sign you've completed the Core Course.</div>
+    </div>
+  </section>
+
+  <footer>Speak Native · Learn what matters — see also our <a href="index.html" style="color:var(--teal)">Privacy Policy</a>, <a href="terms.html" style="color:var(--teal)">Terms of Use</a>, and <a href="faq.html" style="color:var(--teal)">Help &amp; FAQ</a>.</footer>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Speak Native Terms</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #FFFBF8; --surface: #FFFFFF; --surface-alt: #FFF4EE; --surface-cool: #EFFBF8;
+    --border: #F0E4DC; --text: #241C1A; --text-secondary: #5F534D; --text-muted: #7A6E68;
+    --teal: #1B565D; --orange: #B33A0E; color-scheme: light;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #1A1512; --surface: #241E1A; --surface-alt: #2C231D; --surface-cool: #1C2624;
+      --border: #3A2F28; --text: #F5EFEA; --text-secondary: #C9BDB4; --text-muted: #9C8F86;
+      --teal: #6FCBD1; --orange: #FF9B6A; color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #1A1512; --surface: #241E1A; --surface-alt: #2C231D; --surface-cool: #1C2624;
+    --border: #3A2F28; --text: #F5EFEA; --text-secondary: #C9BDB4; --text-muted: #9C8F86;
+    --teal: #6FCBD1; --orange: #FF9B6A; color-scheme: dark;
+  }
+  * { box-sizing: border-box; }
+  body { background: var(--bg); color: var(--text); font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif; font-size: 16px; line-height: 1.65; padding: 0 20px 64px; }
+  .wrap { max-width: 700px; margin: 0 auto; }
+  header { padding: 40px 0 28px; border-bottom: 1px solid var(--border); margin-bottom: 32px; }
+  .wordmark { font-family: "Poppins", sans-serif; font-weight: 700; font-size: 22px; letter-spacing: -0.01em; }
+  .wordmark .native { color: var(--teal); } .wordmark .speak { color: var(--orange); }
+  .tagline { font-family: "Poppins", sans-serif; font-weight: 500; font-size: 12px; color: var(--text-muted); font-style: italic; margin-top: 2px; }
+  h1 { font-family: "Poppins", sans-serif; font-weight: 600; font-size: 26px; margin: 24px 0 4px; text-wrap: balance; }
+  .meta { color: var(--text-muted); font-size: 13px; }
+  h2 { font-family: "Poppins", sans-serif; font-weight: 600; font-size: 17px; color: var(--teal); margin: 36px 0 10px; scroll-margin-top: 16px; }
+  p { margin: 0 0 14px; color: var(--text-secondary); }
+  strong { color: var(--text); } a { color: var(--teal); }
+  .lede { font-size: 17px; color: var(--text); background: var(--surface-cool); border-radius: 14px; padding: 18px 20px; margin: 20px 0 8px; }
+  ul, ol { margin: 0 0 14px; padding-left: 20px; color: var(--text-secondary); }
+  li { margin-bottom: 6px; } li::marker { color: var(--teal); }
+  .toc { display: flex; flex-wrap: wrap; gap: 8px; margin: 20px 0 0; }
+  .toc a { font-size: 12.5px; text-decoration: none; color: var(--text-secondary); background: var(--surface-alt); border: 1px solid var(--border); border-radius: 999px; padding: 6px 12px; }
+  .toc a:hover { color: var(--teal); border-color: var(--teal); }
+  .callout { border: 1px solid var(--border); background: var(--surface); border-radius: 14px; padding: 16px 18px; margin: 10px 0 14px; }
+  .callout p:last-child { margin-bottom: 0; }
+  .fill { color: var(--orange); font-weight: 600; background: var(--surface-alt); padding: 1px 6px; border-radius: 6px; }
+  footer { margin-top: 48px; padding-top: 20px; border-top: 1px solid var(--border); color: var(--text-muted); font-size: 13px; }
+  footer a { color: var(--text-muted); }
+  html,body{margin:0}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <header>
+    <div class="wordmark"><span class="speak">Speak</span> <span class="native">Native</span></div>
+    <div class="tagline">Learn what matters</div>
+  </header>
+
+  <h1>Terms of Use</h1>
+  <p class="meta">Effective date: October 5, 2026 · Last updated: October 5, 2026</p>
+
+  <p class="lede">These Terms govern your use of the Speak Native mobile app ("the App", "we", "us", "our"), independently published by an individual developer. By downloading, accessing, or using Speak Native, you agree to these Terms. If you don't agree, please don't use the App.</p>
+
+  <nav class="toc">
+    <a href="#description">What it is</a>
+    <a href="#accuracy">Content accuracy</a>
+    <a href="#responsibility">Your responsibility</a>
+    <a href="#dataloss">Local data &amp; loss</a>
+    <a href="#availability">Availability</a>
+    <a href="#yourcontent">Your content</a>
+    <a href="#ip">Ownership</a>
+    <a href="#acceptable">Acceptable use</a>
+    <a href="#thirdparty">Third-party services</a>
+    <a href="#appstore">App store terms</a>
+    <a href="#privacy">Privacy</a>
+    <a href="#warranty">No warranty</a>
+    <a href="#liability">Liability</a>
+    <a href="#indemnity">Indemnification</a>
+    <a href="#changes">Changes</a>
+    <a href="#termination">Termination</a>
+    <a href="#law">Governing law</a>
+    <a href="#misc">Other terms</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <h2 id="description">1. What Speak Native is</h2>
+  <p>Speak Native is a self-paced language-learning tool: vocabulary and phrases, phonetic pronunciation guides, text-to-speech playback, and optional voice recording for practice. It's a study aid, not a certified translation service, a professional interpreter, or a substitute for formal language instruction.</p>
+
+  <h2 id="accuracy">2. About the App's content — please read this one</h2>
+  <div class="callout">
+    <p>Speak Native's translations and pronunciation guides are <strong>machine-generated</strong>, and not all of them have been reviewed by a native speaker. We work to keep them useful and reasonably accurate, but they can contain errors, unnatural phrasing, or regional inaccuracies.</p>
+    <p>Nothing in the App should be treated as:</p>
+    <ul>
+      <li>A certified or professional translation;</li>
+      <li>Advice for medical, legal, immigration, safety, or other high-stakes situations; or</li>
+      <li>A guarantee that a phrase will be understood the way you intend in every dialect or context.</li>
+    </ul>
+    <p><strong>Where accuracy genuinely matters</strong> — a medical appointment, a legal document, a safety instruction — use a qualified human translator or interpreter instead of relying on the App.</p>
+  </div>
+
+  <h2 id="responsibility">3. Your responsibility</h2>
+  <p>You're responsible for how you use what you learn from the App, including in conversations with other people. We don't guarantee any particular learning outcome, level of fluency, or result from using Speak Native — progress depends on factors outside our control, including your own practice.</p>
+
+  <h2 id="dataloss">4. Local data and data loss</h2>
+  <p>Speak Native stores your progress, recordings, and settings locally on your device (see our <a href="index.html">Privacy Policy</a> for details). You acknowledge that this data can be lost due to device failure, loss, or theft; accidental deletion; an operating-system change or reset; a software bug; or other circumstances outside our reasonable control. We don't guarantee its permanent preservation, and you're responsible for any backup you consider important.</p>
+
+  <h2 id="availability">5. Availability and updates</h2>
+  <p>We aim to keep the App reliable, but we don't guarantee it will always be available, error-free, or compatible with every device or OS version. We may modify, update, suspend, or discontinue all or part of the App at any time. Updates may add, change, or remove functionality, or fix bugs and security issues; you're responsible for installing them to keep the App working properly and securely.</p>
+
+  <h2 id="yourcontent">6. Your content</h2>
+  <p>You retain ownership of any name, photo, or voice recording you create or add within the App ("Your Content"). We don't claim ownership of it, and because it's stored locally, we don't need — and don't take — any license to upload or otherwise use it. You're responsible for having the rights to any photo or material you add to the App.</p>
+
+  <h2 id="ip">7. Ownership of the App</h2>
+  <p>Speak Native's design, code, branding, and the language content we've written or generated belong to us or our licensors, protected by copyright and other applicable laws. Except as these Terms or the law expressly allow, you may not copy, modify, reverse-engineer, decompile, redistribute outside authorized app stores, sell, rent, sublicense, or commercially exploit the App, or remove or obscure its proprietary notices. Nothing here transfers ownership of the App to you.</p>
+
+  <h2 id="acceptable">8. Acceptable use</h2>
+  <p>You agree not to use Speak Native for any unlawful purpose; to interfere with its operation or security; to attempt unauthorized access to anything associated with it; to distribute malware; to circumvent technical restrictions; or in any way that could reasonably damage the App or other users' experience of it.</p>
+
+  <h2 id="thirdparty">9. Third-party services</h2>
+  <p>Speak Native may be distributed through, and relies on components provided by, platforms such as the Apple App Store, Google Play, and the underlying Expo/React Native frameworks, as well as your device's own text-to-speech engine. Those third parties operate independently of us, under their own terms, and we're not responsible for their availability, security, or practices.</p>
+
+  <h2 id="appstore">10. App store terms</h2>
+  <p>If you downloaded Speak Native through Apple's App Store, Google Play, or another authorized platform, that platform's own terms may additionally apply. These Terms are between you and the Speak Native developer and don't replace the terms applicable to the distribution platform itself; to the extent applicable, Apple and Google may be third-party beneficiaries of the provisions concerning the App as distributed through their platforms.</p>
+
+  <h2 id="privacy">11. Privacy</h2>
+  <p>Your use of Speak Native is also governed by our <a href="index.html">Privacy Policy</a>, which explains how the App handles information and is incorporated into these Terms by reference.</p>
+
+  <h2 id="warranty">12. No warranty</h2>
+  <p>To the fullest extent the law allows, Speak Native is provided "as is" and "as available," without warranties of any kind — express, implied, or statutory — including any implied warranty of merchantability, fitness for a particular purpose, accuracy, reliability, or non-infringement. We don't warrant the App will meet your individual expectations or requirements. Nothing here excludes a warranty or right that can't lawfully be excluded.</p>
+
+  <h2 id="liability">13. Limitation of liability</h2>
+  <p>To the fullest extent the law allows, we won't be liable for indirect, incidental, consequential, special, or punitive damages, or for loss of data, arising from your use of or inability to use the App, your reliance on its content, loss of locally stored data, device failure, third-party services, or any other matter relating to the App. Because Speak Native is free, our total aggregate liability to you is limited to the amount you paid us for it — which is nothing. This doesn't limit any liability that can't legally be limited, such as for fraud or willful misconduct.</p>
+
+  <h2 id="indemnity">14. Indemnification</h2>
+  <p>To the extent the law allows, you agree to defend and hold us harmless from claims, damages, and reasonable expenses arising from your misuse of the App, your violation of these Terms or applicable law, your infringement of another person's rights, or Your Content — except to the extent local law prohibits such an obligation.</p>
+
+  <h2 id="changes">15. Changes to these Terms</h2>
+  <p>We may update these Terms as the App or applicable law changes. The "Last updated" date above reflects the most recent revision. Continuing to use the App after an update takes effect means you accept the revised Terms; if you don't agree, please stop using the App.</p>
+
+  <h2 id="termination">16. Termination</h2>
+  <p>You may stop using Speak Native at any time by uninstalling it. We may suspend or restrict access where reasonably necessary — for example, if you materially violate these Terms, or if the App is discontinued. Provisions that by their nature should survive termination (ownership, disclaimers, liability, indemnification, governing law) continue to apply.</p>
+
+  <h2 id="law">17. Governing law</h2>
+  <p>These Terms are governed by the laws of the Kingdom of Saudi Arabia, without regard to conflict-of-law principles, except where mandatory consumer-protection law in your own country of residence requires otherwise. Any dispute is subject to the jurisdiction of the competent courts of the Kingdom of Saudi Arabia, unless applicable mandatory law provides otherwise. Nothing here is intended to remove a right that can't lawfully be waived under the law that applies to you.</p>
+
+  <h2 id="misc">18. Severability, waiver &amp; entire agreement</h2>
+  <p>If any part of these Terms is found unenforceable, the rest remains in effect. Our failure to enforce a provision isn't a waiver of our right to do so later. These Terms, together with our Privacy Policy, are the entire agreement between you and us regarding the App.</p>
+
+  <h2 id="contact">19. Contact</h2>
+  <p>Questions about these Terms can be sent to <span class="fill">speaknative.learn@gmail.com</span>.</p>
+
+  <footer>Speak Native · Learn what matters — see also our <a href="index.html">Privacy Policy</a>, <a href="manual.html">User Manual</a>, and <a href="faq.html">Help &amp; FAQ</a>.</footer>
+</div>
+
+</body>
+</html>

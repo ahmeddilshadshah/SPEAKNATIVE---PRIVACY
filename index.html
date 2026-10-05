@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Speak Native Privacy</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #FFFBF8; --surface: #FFFFFF; --surface-alt: #FFF4EE; --surface-cool: #EFFBF8;
+    --border: #F0E4DC; --text: #241C1A; --text-secondary: #5F534D; --text-muted: #7A6E68;
+    --teal: #1B565D; --orange: #B33A0E; color-scheme: light;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #1A1512; --surface: #241E1A; --surface-alt: #2C231D; --surface-cool: #1C2624;
+      --border: #3A2F28; --text: #F5EFEA; --text-secondary: #C9BDB4; --text-muted: #9C8F86;
+      --teal: #6FCBD1; --orange: #FF9B6A; color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #1A1512; --surface: #241E1A; --surface-alt: #2C231D; --surface-cool: #1C2624;
+    --border: #3A2F28; --text: #F5EFEA; --text-secondary: #C9BDB4; --text-muted: #9C8F86;
+    --teal: #6FCBD1; --orange: #FF9B6A; color-scheme: dark;
+  }
+  * { box-sizing: border-box; }
+  body { background: var(--bg); color: var(--text); font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif; font-size: 16px; line-height: 1.65; padding: 0 20px 64px; }
+  .wrap { max-width: 700px; margin: 0 auto; }
+  header { padding: 40px 0 28px; border-bottom: 1px solid var(--border); margin-bottom: 32px; }
+  .wordmark { font-family: "Poppins", sans-serif; font-weight: 700; font-size: 22px; letter-spacing: -0.01em; }
+  .wordmark .native { color: var(--teal); } .wordmark .speak { color: var(--orange); }
+  .tagline { font-family: "Poppins", sans-serif; font-weight: 500; font-size: 12px; color: var(--text-muted); font-style: italic; margin-top: 2px; }
+  h1 { font-family: "Poppins", sans-serif; font-weight: 600; font-size: 26px; margin: 24px 0 4px; text-wrap: balance; }
+  .meta { color: var(--text-muted); font-size: 13px; }
+  h2 { font-family: "Poppins", sans-serif; font-weight: 600; font-size: 17px; color: var(--teal); margin: 36px 0 10px; scroll-margin-top: 16px; }
+  h3 { font-family: "Poppins", sans-serif; font-weight: 600; font-size: 14px; color: var(--text); margin: 20px 0 8px; }
+  p { margin: 0 0 14px; color: var(--text-secondary); }
+  strong { color: var(--text); } a { color: var(--teal); }
+  .lede { font-size: 17px; color: var(--text); background: var(--surface-cool); border-radius: 14px; padding: 18px 20px; margin: 20px 0 8px; }
+  ul, ol { margin: 0 0 14px; padding-left: 20px; color: var(--text-secondary); }
+  li { margin-bottom: 6px; } li::marker { color: var(--teal); }
+  .toc { display: flex; flex-wrap: wrap; gap: 8px; margin: 20px 0 0; }
+  .toc a { font-size: 12.5px; text-decoration: none; color: var(--text-secondary); background: var(--surface-alt); border: 1px solid var(--border); border-radius: 999px; padding: 6px 12px; }
+  .toc a:hover { color: var(--teal); border-color: var(--teal); }
+  .callout { border: 1px solid var(--border); background: var(--surface); border-radius: 14px; padding: 16px 18px; margin: 10px 0 14px; }
+  .callout p:last-child { margin-bottom: 0; }
+  .fill { color: var(--orange); font-weight: 600; background: var(--surface-alt); padding: 1px 6px; border-radius: 6px; }
+  table { width: 100%; border-collapse: collapse; margin: 8px 0 14px; font-size: 14.5px; }
+  th, td { text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--border); vertical-align: top; }
+  th { color: var(--text-muted); font-weight: 600; font-size: 12px; text-transform: uppercase; letter-spacing: 0.02em; }
+  td { color: var(--text-secondary); }
+  td:first-child { color: var(--text); font-weight: 500; }
+  footer { margin-top: 48px; padding-top: 20px; border-top: 1px solid var(--border); color: var(--text-muted); font-size: 13px; }
+  footer a { color: var(--text-muted); }
+  html,body{margin:0}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <header>
+    <div class="wordmark"><span class="speak">Speak</span> <span class="native">Native</span></div>
+    <div class="tagline">Learn what matters</div>
+  </header>
+
+  <h1>Privacy Policy</h1>
+  <p class="meta">Effective date: October 5, 2026 · Last updated: October 5, 2026</p>
+
+  <p class="lede">Speak Native ("the App", "we", "us", "our") is an offline language-learning app independently published by an individual developer. This policy explains how the App handles information — and the short version is that it barely handles any: everything stays on your device, we don't operate a server, and we don't collect analytics.</p>
+
+  <p>By using Speak Native, you acknowledge the practices described in this Privacy Policy.</p>
+
+  <nav class="toc">
+    <a href="#collect">What you enter</a>
+    <a href="#nocollect">What we don't collect</a>
+    <a href="#storage">Local storage</a>
+    <a href="#media">Photos &amp; recordings</a>
+    <a href="#permissions">Permissions</a>
+    <a href="#third-party">Third-party services</a>
+    <a href="#sharing">Sharing</a>
+    <a href="#retention">Retention</a>
+    <a href="#deletion">Deletion</a>
+    <a href="#security">Security</a>
+    <a href="#international">International</a>
+    <a href="#rights">Your rights</a>
+    <a href="#children">Children</a>
+    <a href="#changes">Changes</a>
+    <a href="#future">Future features</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <h2 id="collect">1. Information you enter into the App</h2>
+  <p>Speak Native lets you create and store learning information, which may include:</p>
+  <ul>
+    <li>Your first name (optional, shown as a Home-screen greeting)</li>
+    <li>A profile photo (optional)</li>
+    <li>Which languages you're learning and your base (display) language</li>
+    <li>Which words and phrases you've marked learned or favorited</li>
+    <li>Voice recordings you make while practicing pronunciation</li>
+    <li>App settings and preferences</li>
+  </ul>
+  <p>This information is stored locally on your device. Speak Native does not transmit it to a server — we don't operate one, and the developer has no routine access to any of it.</p>
+
+  <h3>Analytics and telemetry</h3>
+  <p>Speak Native does not currently collect analytics or telemetry data of any kind. There is no analytics SDK, no advertising SDK, and no crash-reporting service integrated into the App.</p>
+
+  <h2 id="nocollect">2. Information we do not collect</h2>
+  <p>Except where you voluntarily provide it through a third-party service outside the App (for example, emailing us), Speak Native does not collect or maintain:</p>
+  <ul>
+    <li>Your email address, phone number, or physical address</li>
+    <li>A password or account credentials — there is no account system</li>
+    <li>Your contacts or precise location</li>
+    <li>Your advertising identifier</li>
+    <li>Your learning data, recordings, or photo on any server — we don't have one</li>
+    <li>Payment information — the App has nothing to buy</li>
+    <li>Behavioral profiles or cross-app tracking information</li>
+  </ul>
+  <p>We do not sell, rent, or otherwise monetize your information.</p>
+
+  <h2 id="storage">3. Local storage</h2>
+  <p>Speak Native is built around on-device storage. This means:</p>
+  <ul>
+    <li>Your learning progress isn't maintained in a cloud database.</li>
+    <li>The developer can't remotely view, back up, or restore it.</li>
+    <li>If your device is lost, reset, or the App is uninstalled, that information is gone — there is no server copy to recover it from.</li>
+    <li>You're responsible for any backup you consider important.</li>
+  </ul>
+  <p>Your device's operating system may separately back up app data to a service operated by Apple, Google, or another provider (for example, iCloud or Google's automatic app backup). That backup is governed by the relevant provider's own terms and privacy policy, which Speak Native doesn't control.</p>
+
+  <h2 id="media">4. Photos and voice recordings</h2>
+  <p>Speak Native lets you select a photo from your device library to use as your profile picture, and lets you record your own voice to compare against the reference pronunciation. In both cases:</p>
+  <ul>
+    <li>The App uses the photo or recording only for the feature you requested.</li>
+    <li>It's processed and stored entirely on your device.</li>
+    <li>It is never uploaded anywhere.</li>
+  </ul>
+  <p>You can revoke the App's microphone or photo-library access at any time through your device's operating-system settings. If you separately choose to export or share a recording or photo through another app (for example, messaging or email), that information leaves your device and becomes subject to that other service's own terms and policies, which we don't control.</p>
+
+  <h2 id="permissions">5. Permissions the App requests</h2>
+  <table>
+    <tr><th>Permission</th><th>Used for</th></tr>
+    <tr><td>Microphone</td><td>Recording your own pronunciation attempts, on-device only</td></tr>
+    <tr><td>Photo library</td><td>Choosing a profile picture, on-device only</td></tr>
+  </table>
+  <p>Speak Native never requests location, contacts, camera (beyond the photo picker), calendar, or any other permission.</p>
+
+  <h2 id="third-party">6. Third-party services</h2>
+  <p>The current version of Speak Native is designed not to transmit your information to any third-party analytics, advertising, or cloud-storage service. The App does rely on platform components provided by Apple, Google, Expo, and React Native to function on your device — those providers may independently process information (for example, standard OS-level diagnostics) under their own terms, which Speak Native doesn't control. On-device text-to-speech is provided by your operating system's own speech engine, not by us.</p>
+  <p>If we integrate a third-party service in the future that collects or processes information from the App, this policy will be updated before or when that functionality is introduced.</p>
+
+  <h2 id="sharing">7. Sharing of information</h2>
+  <p>We don't sell, rent, or share your locally stored information with third parties. Information can only leave the App if you deliberately export or share it yourself (for example, sharing a recording through another app you've installed) — at that point, the receiving service is responsible for it, subject to its own policies.</p>
+
+  <h2 id="retention">8. Data retention</h2>
+  <p>Because there's no server-side database, your information stays on your device until you delete it through the App, clear the App's storage, or uninstall it. Device-level backups (see Section 3) may retain copies according to your device's own settings.</p>
+
+  <h2 id="deletion">9. Deletion</h2>
+  <p>You can remove your name or photo at any time in Settings. Uninstalling the App deletes everything it stored — progress, recordings, and settings — permanently, since there's no separate server copy to also delete. If you believe we've somehow received personal information about you and want it deleted, contact us using the details in Section 16.</p>
+
+  <h2 id="security">10. Security</h2>
+  <p>We take reasonable measures appropriate to the App to help protect the information it handles. Because that information is stored locally, its security also depends on your own device's security — its passcode, operating system, and any backup or sharing services you separately use. No method of electronic storage is completely secure, so while we take reasonable care, we can't guarantee absolute security.</p>
+
+  <h2 id="international">11. International availability</h2>
+  <p>Speak Native is made available internationally, and privacy laws differ by country. Depending on where you live, you may have rights under laws such as the EU's GDPR, UK data-protection legislation, the California Consumer Privacy Act, Saudi Arabia's Personal Data Protection Law (PDPL), or other applicable laws. Nothing in this policy is intended to remove any right that can't lawfully be excluded.</p>
+
+  <h2 id="rights">12. Your privacy rights</h2>
+  <p>Depending on your location, you may have the right to know what personal information (if any) we hold about you, request access to or correction of it, request its deletion, object to or restrict its processing, or lodge a complaint with a data-protection authority. Because Speak Native stores your learning information locally rather than on a server, you generally already have direct control over it through your own device. If you have questions about your rights, contact us below.</p>
+
+  <h2 id="children">13. Children's privacy</h2>
+  <p>Speak Native is not directed at children and isn't designed to knowingly collect personal information from anyone, including children. If you believe a child has provided personal information to us in a way that shouldn't have been permitted, contact us and we'll look into it.</p>
+
+  <h2 id="changes">14. Changes to this policy</h2>
+  <p>We may update this policy as the App's functionality changes, or as legal or platform requirements change. The "Last updated" date above reflects the most recent revision. If we make a material change to how information is handled, we'll provide notice as required by applicable law. Please check back periodically.</p>
+
+  <h2 id="future">15. Future features</h2>
+  <p>Speak Native may add features in future versions — for example, optional cloud backup, accounts, or additional content. If a future feature materially changes how information is collected, used, or stored, this policy (and any applicable app-store privacy disclosures) will be updated before or when that feature ships. The practices that apply to a given version of the App are the ones described in the policy in effect for that version.</p>
+
+  <h2 id="contact">16. Contact</h2>
+  <p>Questions, concerns, or privacy requests about Speak Native can be sent to <span class="fill">speaknative.learn@gmail.com</span>.</p>
+
+  <footer>Speak Native · Learn what matters — see also our <a href="terms.html">Terms of Use</a>, <a href="manual.html">User Manual</a>, and <a href="faq.html">Help &amp; FAQ</a>.</footer>
+</div>
+
+</body>
+</html>
