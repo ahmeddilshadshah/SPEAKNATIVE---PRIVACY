@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>A phrase from Speak Native</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #FFFBF8; --surface: #FFFFFF; --surface-cool: #EFFBF8; --border: #F0E4DC;
+    --text: #241C1A; --text-secondary: #5F534D; --text-muted: #7A6E68;
+    --teal: #1B565D; --orange: #B33A0E; color-scheme: light;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #1A1512; --surface: #241E1A; --surface-cool: #1C2624; --border: #3A2F28;
+      --text: #F5EFEA; --text-secondary: #C9BDB4; --text-muted: #9C8F86;
+      --teal: #6FCBD1; --orange: #FF9B6A; color-scheme: dark;
+    }
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--text); font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif; line-height: 1.6; padding: 0 20px 48px; }
+  .wrap { max-width: 520px; margin: 0 auto; }
+  header { padding: 36px 0 20px; text-align: center; }
+  .wordmark { font-family: "Poppins", sans-serif; font-weight: 700; font-size: 24px; }
+  .wordmark .speak { color: var(--orange); } .wordmark .native { color: var(--teal); }
+  .from { text-align: center; color: var(--text-muted); font-size: 13px; margin-bottom: 14px; }
+  .card { background: var(--surface); border: 1px solid var(--border); border-radius: 22px; padding: 30px 22px; text-align: center; }
+  #native { font-family: "Poppins", sans-serif; font-weight: 700; font-size: 36px; line-height: 1.25; word-break: break-word; }
+  #guide { color: var(--teal); font-weight: 500; font-size: 18px; margin-top: 8px; }
+  #gloss { color: var(--text-secondary); font-size: 16px; margin-top: 10px; }
+  .actions { margin-top: 22px; display: grid; gap: 10px; }
+  .btn { display: block; text-align: center; text-decoration: none; font-family: "Poppins", sans-serif; font-weight: 600; font-size: 16px; padding: 14px 18px; border-radius: 999px; }
+  .primary { background: var(--orange); color: #fff; }
+  @media (prefers-color-scheme: dark) { .primary { background: #C2410C; } }
+  .note { margin-top: 22px; background: var(--surface-cool); border-radius: 14px; padding: 14px 16px; font-size: 14px; color: var(--text-secondary); }
+  .note strong { color: var(--text); }
+  footer { text-align: center; margin-top: 28px; font-size: 12px; color: var(--text-muted); }
+  footer a { color: var(--teal); }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="wordmark"><span class="speak">Speak</span> <span class="native">Native</span></div>
+  </header>
+
+  <div class="from">Someone shared a phrase with you</div>
+  <div class="card">
+    <div id="native" dir="auto">…</div>
+    <div id="guide" dir="auto"></div>
+    <div id="gloss" dir="auto"></div>
+    <div class="actions">
+      <a class="btn primary" id="open" href="#">Open in Speak Native</a>
+    </div>
+  </div>
+
+  <div class="note">
+    <strong>Don't have Speak Native yet?</strong> It's an offline phrase-learning app and is in private
+    testing right now &mdash; ask the person who sent you this phrase for an invite. If you already have the
+    app, the button above opens this phrase in it, with the meaning shown in your own language.
+  </div>
+
+  <footer><a href="./">Privacy Policy</a> &middot; <a href="./terms.html">Terms of Use</a> &middot; <a href="./faq.html">Help &amp; FAQ</a></footer>
+</div>
+
+<script>
+  // Everything here comes from the link, so it is only ever written with textContent
+  // (never as HTML) and the ids are validated before being used in the app link.
+  (function () {
+    var q = new URLSearchParams(location.search);
+    var clip = function (s, n) { return String(s || "").slice(0, n); };
+    var set = function (id, value) { document.getElementById(id).textContent = clip(value, 300); };
+    set("native", q.get("t") || "Speak Native");
+    set("guide", q.get("r"));
+    set("gloss", q.get("g"));
+
+    var c = q.get("c") || "", l = q.get("l") || "";
+    var open = document.getElementById("open");
+    if (/^[A-Za-z0-9_-]{1,80}$/.test(c) && /^[A-Za-z]{2,3}(-[A-Za-z0-9]{2,4})?$/.test(l)) {
+      var path = "phrase?c=" + encodeURIComponent(c) + "&l=" + encodeURIComponent(l);
+      var android = /android/i.test(navigator.userAgent);
+      open.href = android
+        ? "intent://" + path + "#Intent;scheme=speaknative;package=com.ahmeddilshadshah.speaknative;end"
+        : "speaknative://" + path;
+    } else {
+      open.style.display = "none";
+    }
+  })();
+</script>
+</body>
+</html>
